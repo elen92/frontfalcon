@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Contactenos</h1>
+  <form [formGroup]="contactRegister" (ngSubmit)="contactUs()" enctype="multipart/form-data">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="eventType">Clase de servicio</label>
+        <input type="text" class="form-control" id="eventType" placeholder="Escribe tu servicio" name="eventType" formControlName="eventType">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="description">Descripción</label>
+        <input type="text" class="form-control" id="description" placeholder="Escribe lo que buscas" name="description" formControlName="description">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email"
+        formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Número de teléfono</label>
+      <input type="number" class="form-control" id="phone" placeholder="Escribe tu número de teléfono" name="phone"
+        formControlName="phone">
+    </div>
+
+    <button type="submit"  class="btn btn-primary">Enviar</button>
+  </form>
+
+</div>
