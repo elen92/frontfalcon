@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { DestinationsRegisterComponent } from './components/destinations-register/destinations-register.component';
 import { UsersUpdateComponent } from './components/users-update/users-update.component';
 
 
@@ -11,12 +12,12 @@ import { UsersUpdateComponent } from './components/users-update/users-update.com
   declarations: [
     AppComponent,
     MenuComponent,
+    DestinationsRegisterComponent,
     UsersUpdateComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
