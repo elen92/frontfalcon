@@ -1,16 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { DestinationsRegisterComponent } from './components/destinations-register/destinations-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    DestinationsRegisterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
