@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Login</h1>
+    <form [formGroup]="login" (ngSubmit)="signIn()" enctype="multipart/form-data">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" formControlName="email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" formControlName="password">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+</div>

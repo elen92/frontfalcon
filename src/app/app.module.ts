@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { DestinationsRegisterComponent } from './components/destinations-register/destinations-register.component';
 import { UsersUpdateComponent } from './components/users-update/users-update.component';
@@ -14,6 +15,7 @@ import { ContactRegisterComponent } from './components/contact-register/contact-
   declarations: [
     AppComponent,
     MenuComponent,
+    LoginComponent,
     ContactRegisterComponent,
     UserRegisterComponent,
     DestinationsRegisterComponent,
