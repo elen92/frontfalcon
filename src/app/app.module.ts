@@ -19,11 +19,6 @@ import { UserRegisterComponent } from './components/user-register/user-register.
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  imports: [
-    BrowserModule,
     ReactiveFormsModule
   ],
   providers: [],
