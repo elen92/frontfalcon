@@ -5,12 +5,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { DestinationsRegisterComponent } from './components/destinations-register/destinations-register.component';
+import { UsersUpdateComponent } from './components/users-update/users-update.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DestinationsRegisterComponent
+    DestinationsRegisterComponent,
+    UsersUpdateComponent
   ],
   imports: [
     BrowserModule,
