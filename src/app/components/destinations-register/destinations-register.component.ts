@@ -21,7 +21,7 @@ export class DestinationsRegisterComponent implements OnInit {
 
   validator(): void{
     this.destinationRegisterForm = this.formBuilder.group({
-      inputName: ['', Validators.required],
+      destinationName: ['', Validators.required],
       city: ['', Validators.required],
       country: ['', Validators.required],
       price: ['', Validators.required],
