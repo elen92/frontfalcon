@@ -1,22 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { NombreComponenteComponent } from './Components/nombre-componente/nombre-componente.component';
-import { ContactregisterComponent } from './Components/contactregister/contactregister.component';
+
+import { DestinationsRegisterComponent } from './components/destinations-register/destinations-register.component';
+import { UsersUpdateComponent } from './components/users-update/users-update.component';
+import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    NombreComponenteComponent,
-    ContactregisterComponent,
-    ContactRegisterComponent
+    ContactRegisterComponent,
+    UserRegisterComponent,
+    DestinationsRegisterComponent,
+    UsersUpdateComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
