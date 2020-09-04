@@ -1,17 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { DestinationService } from '../../services/destination.service';
 
 @Component({
   selector: 'app-destinations-register',
   templateUrl: './destinations-register.component.html',
-  styleUrls: ['./destinations-register.component.css']
+  styleUrls: ['./destinations-register.component.css'],
+  providers: [
+    DestinationService
+  ]
 })
 export class DestinationsRegisterComponent implements OnInit {
 
   destinationRegisterForm: FormGroup;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private destinationService: DestinationService
   ) {
     this.validator();
   }
@@ -31,11 +36,12 @@ export class DestinationsRegisterComponent implements OnInit {
     });
   }
 
-  enviarDestino(): void{
-    if (this.destinationRegisterForm.valid){
-      alert('se puede guardar');
-    }else{
-      alert('Error, no se pudo almacenar');
+  async enviarDestino(): Promise<any>{
+    try{
+      const destination = await this.destinationService.saveDestinations(this.destinationRegisterForm.value);
+      console.log(destination);
+    }catch (err){
+      console.log(err);
     }
   }
 }

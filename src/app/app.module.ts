@@ -12,6 +12,9 @@ import { UsersUpdateComponent } from './components/users-update/users-update.com
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,

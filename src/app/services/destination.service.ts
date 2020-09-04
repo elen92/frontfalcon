@@ -8,17 +8,18 @@ import { Destination } from '../models/Destinations';
 })
 export class DestinationService {
 
-  url = 'https://falcon-travel-api.herokuapp.com/';
+  url = 'https://falcon-travel-api.herokuapp.com/api';
 
   constructor(
     private http: HttpClient
   ) { }
 
-  saveDestinations(destination: Destination): Promise<any>{
-    console.log(destination);
+  saveDestinations(destination: Destination): Promise<any> {
     return this.http.post(`${this.url}/destinations/create`, destination)
     .toPromise()
-    .then()
+    .then(destination => {
+      return destination;
+    })
     .catch(err => {
       console.log(err);
     });
