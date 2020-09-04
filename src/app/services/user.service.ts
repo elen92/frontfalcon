@@ -15,5 +15,10 @@ export class UserService {
    }
   create(userData){
     return this.http.post<User>(`${this.apiurl}/user/create`, userData)
-  } 
+  }
+
+  login(loginData){
+    return this.http.post<User>(`${this.apiurl}/user/login`, loginData)
+  }
+
 }

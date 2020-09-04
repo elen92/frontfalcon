@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -12,7 +13,16 @@ import { UsersUpdateComponent } from './components/users-update/users-update.com
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './guardians/auth.guard';
+
+const routesAPP: Routes = [
+  { path: '', component: UserRegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registerUser', component: UserRegisterComponent },
+  { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
+  { path: 'contactUs', component: ContactRegisterComponent },
+  { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
+];
 
 
 @NgModule({
@@ -28,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routesAPP)
   ],
   providers: [],
   bootstrap: [AppComponent]
