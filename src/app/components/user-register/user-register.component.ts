@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {UserService} from '../../services/user.service'
 @Component({
   selector: 'app-user-register',
   templateUrl: './user-register.component.html',
@@ -11,7 +11,8 @@ export class UserRegisterComponent implements OnInit {
   userForm: FormGroup
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private services: UserService
   ) {
     this.validator()
   }
@@ -23,20 +24,30 @@ export class UserRegisterComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      email: ['', Validators.required],
       phone: ['', Validators.required],
       password: ['', Validators.required],
       photo: ['', Validators.required],
       address: ['', Validators.required],
-      idDocument: ['', Validators.required]
+      idDocument: ['', Validators.required],
+      nationality: ['', Validators.required]
     })
   }
 
   saveUser(){
     if(this.userForm.valid){
-      alert("La información se puede almacenar")
+      this.services.create(this.userForm.value).subscribe(
+        (userData)=>{
+          alert("Usuario creado con exito")
+          console.log("Muy bien")
+          
+        },(error)=>{
+          console.error("Error al crear el usuario",error)
+        }
+      )
     }else{
       alert("Error, no se puede almacenar la información")
+      console.log(this.userForm.errors)
     }
   }
 
