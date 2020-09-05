@@ -14,6 +14,7 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
 import { AuthGuard } from './guardians/auth.guard';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
 
 const routesAPP: Routes = [
   { path: '', component: UserRegisterComponent },
@@ -33,7 +34,8 @@ const routesAPP: Routes = [
     ContactRegisterComponent,
     UserRegisterComponent,
     DestinationsRegisterComponent,
-    UsersUpdateComponent
+    UsersUpdateComponent,
+    ExperiencesComponent
   ],
   imports: [
     BrowserModule,
