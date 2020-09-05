@@ -19,7 +19,7 @@ import { BannerPrincipalComponent } from './components/banner-principal/banner-p
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 const routesAPP: Routes = [
-  { path: '', component: UserRegisterComponent },
+  { path: '', component: BannerPrincipalComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
