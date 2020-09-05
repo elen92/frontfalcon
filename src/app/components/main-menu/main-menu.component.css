@@ -1,13 +1,38 @@
 .main-menu-box
 {
-    
-    .iconos{
-
-    }    
-    .logo{
-
-    }
-    .contactos{
-
-    }
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.iconos,.contactos,.logo{
+    display: flex;
+    align-items: center;
+}
+.iconos i{
+    font-size: 35px;
+    margin: 0 5px;
+}   
+.icon-insta{
+    color: violet;
+}
+.icon-face{
+    color: #3b5998;
+}
+.icon-twit{
+    color: #00acee;
+}
+.icon-you{
+    color: #ff0000;
+}
+.logo img{
+    max-width: 80px;
+}
+.contactos button{
+    background-color: transparent;
+    border: none;
+}
+.contactos button:hover{
+    background-color: transparent;
+    border: none;
+    color: violet;
 }
