@@ -1,0 +1,14 @@
+.card-title{
+    text-align: center;
+    /* color: white; */
+    font-size: x-large;    
+}
+.card-body{
+    background-color: #ef2e5c;
+    height: 10px;
+    
+}
+.card{
+    padding: 6px;
+    border: 0px;
+}
