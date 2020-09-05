@@ -20,10 +20,11 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routesAPP: Routes = [
-  { path: '', component: BannerPrincipalComponent },
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
@@ -45,7 +46,8 @@ const routesAPP: Routes = [
     ExperiencesComponent,
     FooterComponent,
     BannerPrincipalComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
