@@ -14,9 +14,13 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
 import { AuthGuard } from './guardians/auth.guard';
+
+import { ExperiencesComponent } from './components/experiences/experiences.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+
 
 const routesAPP: Routes = [
   { path: '', component: BannerPrincipalComponent },
@@ -37,6 +41,8 @@ const routesAPP: Routes = [
     UserRegisterComponent,
     DestinationsRegisterComponent,
     UsersUpdateComponent,
+
+    ExperiencesComponent,
     FooterComponent,
     BannerPrincipalComponent,
     MainMenuComponent
