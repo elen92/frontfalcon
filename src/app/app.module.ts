@@ -14,7 +14,9 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
 import { AuthGuard } from './guardians/auth.guard';
+import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+
 
 const routesAPP: Routes = [
   { path: '', component: UserRegisterComponent },
@@ -35,6 +37,7 @@ const routesAPP: Routes = [
     UserRegisterComponent,
     DestinationsRegisterComponent,
     UsersUpdateComponent,
+    BannerPrincipalComponent,
     MainMenuComponent
   ],
   imports: [

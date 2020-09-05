@@ -1,0 +1,28 @@
+.card-img {
+    height: 500px;
+    position: relative;
+    object-fit: fill;
+    border-radius: 0px !important;
+}
+.card {
+    border-radius: 0px !important;
+    
+}
+.card .card-title {
+    font-size: 60px;
+    color: #dd7033;
+}
+.card .card-text {
+    font-size: 30px;
+}
+.form-inline {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 50px;
+    border: 0px !important;
+}
+.form-group  {
+    color: black;
+}
+.form-group  input {
+    border: 0px !important;
+}
