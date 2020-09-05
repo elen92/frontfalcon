@@ -32,7 +32,7 @@ export class UsersUpdateComponent implements OnInit {
     });
 
   }
-  saveUser(){
+  updateUser(){
     if(this.usersUpdate.valid){
       // tslint:disable-next-line: quotemark
       alert("La información se puede almacenar");
