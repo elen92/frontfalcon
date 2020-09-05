@@ -1,52 +1,40 @@
-<div class="container">
-    <h2>
-        Crea un nuevo destino
-    </h2>
-  <form [formGroup]="destinationRegisterForm" (ngSubmit)="enviarDestino()" enctype="multipart/form-data">
-    <div class="form-row">
-      <div class="form-group col-md-12">
-        <label for="destinationName">Name</label>
-        <input type="text" class="form-control" id="destinationName" name="destinationName" formControlName="destinationName"/>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="city">Ciudad</label>
-        <input type="text" class="form-control" id="city" name="city" formControlName="city"/>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="country">País</label>
-        <input
-          type="text"
-          class="form-control"
-          id="country"
-          name="country"
-          formControlName="country"
-        />
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="price">Precio</label>
-      <input
-        type="number"
-        class="form-control"
-        id="price"
-        name="price"
-        formControlName="price"
-      />
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="description">Descripción</label>
-        <input type="text" class="form-control" id="description" name="description" formControlName="description"/>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="stay">Tiempo de estadía</label>
-        <input type="number" class="form-control" id="stay" name="stay" formControlName="stay"/>
-      </div>
-      <div class="form-group col-md-12">
-        <label for="imageLinks">Links de imagenes</label>
-        <input type="text" class="form-control" id="imageLinks" name="imageLinks" formControlName="imageLinks"/>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-  </form>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Crea un nuevo destino</h1>
+    <form [formGroup]="destinationRegisterForm" (ngSubmit)="enviarDestino()" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="destinationName">Name</label>
+                <input type="text" class="form-control" id="destinationName" name="destinationName" formControlName="destinationName" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="city">Ciudad</label>
+                <input type="text" class="form-control" id="city" name="city" formControlName="city" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">País</label>
+                <input type="text" class="form-control" id="country" name="country" formControlName="country" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="price">Precio</label>
+            <input type="number" class="form-control" id="price" name="price" formControlName="price" />
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="description">Descripción</label>
+                <input type="text" class="form-control" id="description" name="description" formControlName="description" />
+            </div>
+            <div class="form-group col-md-6">
+                <label for="stay">Tiempo de estadía</label>
+                <input type="number" class="form-control" id="stay" name="stay" formControlName="stay" />
+            </div>
+            <div class="form-group col-md-12">
+                <label for="imageLinks">Links de imagenes</label>
+                <input type="text" class="form-control" id="imageLinks" name="imageLinks" formControlName="imageLinks" />
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
 </div>

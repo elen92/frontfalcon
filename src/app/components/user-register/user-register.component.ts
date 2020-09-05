@@ -40,7 +40,6 @@ export class UserRegisterComponent implements OnInit {
         (userData)=>{
           alert("Usuario creado con exito")
           console.log("Muy bien")
-          
         },(error)=>{
           console.error("Error al crear el usuario",error)
         }
@@ -50,5 +49,4 @@ export class UserRegisterComponent implements OnInit {
       console.log(this.userForm.errors)
     }
   }
-
 }
