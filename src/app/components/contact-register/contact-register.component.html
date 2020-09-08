@@ -1,30 +1,37 @@
-<div class="container mt-5">
-    <h1 class="text-center mb-5">Dejanos un mensaje</h1>
-    <form [formGroup]="contactRegister" (ngSubmit)="contactUs()" enctype="multipart/form-data">
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="eventType">Clase de servicio</label>
-                <input type="text" class="form-control" id="eventType" placeholder="Escribe tu servicio" name="eventType" formControlName="eventType">
+<body>
+    <div class="container mt-5">
+        <div class="box">
+            <h1 class="text-center mb-5">Dejanos tu mensaje</h1>
+        <form [formGroup]="contactRegister" (ngSubmit)="contactUs()" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col font-weight-bold">
+                    <label for="eventType">Clase de servicio:</label>
+                    <input type="text" class="form-control" id="eventType" placeholder="Escribe tu servicio" name="eventType" formControlName="eventType">
+                </div>
             </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col">
-                <label for="description">Descripción</label>
-                <textarea class="form-control" id="description" placeholder="Escribe lo que buscas" name="description" formControlName="description"></textarea>
+            <div class="form-row">
+                <div class="form-group col font-weight-bold">
+                    <label for="description">Descripción:</label>
+                    <textarea class="form-control" id="description" placeholder="Escribe lo que buscas" name="description" formControlName="description"></textarea>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="email">Correo electrónico</label>
-            <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email" formControlName="email">
-        </div>
-        <div class="form-group">
-            <label for="phone">Número de teléfono</label>
-            <input type="number" class="form-control" id="phone" placeholder="Escribe tu número de teléfono" name="phone" formControlName="phone">
-        </div>
+            <div class="form-group font-weight-bold">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" placeholder="Escribe tu email" name="email" formControlName="email">
+            </div>
+            <div class="form-group font-weight-bold">
+                <label for="phone">Número de teléfono:</label>
+                <input type="number" class="form-control" id="phone" placeholder="Escribe tu número de teléfono" name="phone" formControlName="phone">
+            </div>
+    
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary font-weight-bold">Enviar</button>
+            </div>
+        </form>
 
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
-    </form>
-
-</div>
+        
+    
+    </div>
+    
+</body>
