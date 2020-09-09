@@ -24,4 +24,16 @@ export class DestinationService {
       console.log(err);
     });
   }
+
+  findDestinations(travel): Promise<any> {
+    const url =`http://localhost:3000/api/destinations/getByParams/${travel.origin}/${travel.destination}/${travel.startDate}/${travel.endDate}`;
+    return this.http.get(url)
+    .toPromise()
+    .then(result => {
+      return result;
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
 }

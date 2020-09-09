@@ -1,29 +1,33 @@
 <div class="card text-white">
     <img src="assets/pics/cottages-in-the-middle-of-beach-753626.jpg" class="card-img" alt="...">
-       
+
     <div class="card-img-overlay">
-        <div class="form-inline border border-dark bg-light p-3 ">
-         
-                <div class="form-group mb-2 font-weight-bold mr-3">
-                    <label for="" class="mr-1">Origen:</label>
-                    <input type="text">
-                </div>
-                <div class="form-group mb-2 font-weight-bold mr-3">
-                    <label for="" class="mr-1">Destino:</label>
-                    <input type="text">
-                </div>
-                <div class="form-group mb-2 font-weight-bold mr-3">
-                    <label for=""class="mr-1">Fecha de salida:</label>
-                    <input type="date">
-                </div>
-                <div class="form-group mb-2 font-weight-bold">
-                    <label for="" class="mr-1">Fecha de Regreso:</label>
-                    <input type="date">
-                </div>
-                <button class="btn btn-warning mb-2 ml-5 font-weight-bold">Buscar</button>
-         
+        <div class="form-inline border border-dark bg-light">
+
+            <div class="font-weight-bold mr-3">
+                <label class="label-finder mr-1" for="">Origen:</label>
+                <select class="opt-finder" name="miselect" [(ngModel)]="origin">
+                    <option *ngFor="let item of cities" [value]="item._id">{{ item.name }}</option>
+                </select>
+            </div>
+            <div class="font-weight-bold mr-3">
+                <label class="label-finder mr-1" for="">Destino:</label>
+                <select class="opt-finder" name="miselect" [(ngModel)]="destination">
+                    <option *ngFor="let item of cities" [value]="item._id">{{ item.name }}</option>
+                </select>
+            </div>
+            <div class="font-weight-bold mr-3">
+                <label class="label-finder mr-1" for="">Fecha de salida:</label>
+                <input class="opt-finder" type="date" [(ngModel)]="travel.startDate">
+            </div>
+            <div class="font-weight-bold">
+                <label class="label-finder mr-1" for="">Fecha de Regreso:</label>
+                <input class="opt-finder" type="date" [(ngModel)]="travel.endDate">
+            </div>
+            <button class="btn btn-warning ml-5 font-weight-bold" (click)="find()">Buscar</button>
+
         </div>
-      <h5 class="card-title font-weight-bold text-warning">Viajemos juntos!</h5>
-      <p class="card-text font-weight-bold">Con nosotros viaja tranquilo, viaja siendo tu.</p>
+        <h5 class="card-title font-weight-bold text-warning">Viajemos juntos!</h5>
+        <p class="card-text font-weight-bold">Con nosotros viaja tranquilo, viaja siendo tú.</p>
     </div>
 </div>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -14,12 +14,16 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { ContactRegisterComponent } from './components/contact-register/contact-register.component';
 
 import { AuthGuard } from './guardians/auth.guard';
+
+import { ExperiencesComponent } from './components/experiences/experiences.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
+
 const routesAPP: Routes = [
-  { path: '', component: UserRegisterComponent },
+  { path: '', component: BannerPrincipalComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
@@ -37,6 +41,8 @@ const routesAPP: Routes = [
     UserRegisterComponent,
     DestinationsRegisterComponent,
     UsersUpdateComponent,
+
+    ExperiencesComponent,
     FooterComponent,
     BannerPrincipalComponent,
     MainMenuComponent
@@ -44,6 +50,7 @@ const routesAPP: Routes = [
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routesAPP)
   ],
