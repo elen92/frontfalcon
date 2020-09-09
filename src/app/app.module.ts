@@ -21,6 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { RegionsComponent } from './components/regions/regions.component';
 
 
 const routesAPP: Routes = [
@@ -30,6 +32,7 @@ const routesAPP: Routes = [
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
   { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
+  { path: 'regions', component: RegionsComponent}
 ];
 
 
@@ -47,7 +50,9 @@ const routesAPP: Routes = [
     FooterComponent,
     BannerPrincipalComponent,
     MainMenuComponent,
-    HomeComponent
+    HomeComponent,
+    DestinationsComponent,
+    RegionsComponent
   ],
   imports: [
     BrowserModule,
