@@ -1,7 +1,26 @@
 .iconoFooter{
-    font-size: 40px;
-    padding-right: 10px !important ;
+    font-size: 26px;
+    padding-right: 20px !important ;
+    color: #ef2e5c;
 }
-.lead{
+.lead {
     font-size: 14px;
+}
+.text-size{
+    font-size: 13px;
+    line-height: 26px;
+}
+
+.text-muted:hover{
+    color: #ef2e5c !important;
+    text-decoration: none !important;
+}
+.line-footer{
+    width: 94%;
+    opacity: 5;
+}
+
+.text-legales{
+    font-size: 11px;
+    text-align: justify;
 }
