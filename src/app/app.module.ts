@@ -24,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { DestinationsComponent } from './components/destinations/destinations.component';
 import { RegionsComponent } from './components/regions/regions.component';
+import { AllDestinationsComponent } from './components/all-destinations/all-destinations.component';
 
 
 const routesAPP: Routes = [
@@ -32,6 +33,9 @@ const routesAPP: Routes = [
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
+  { path: 'destination', component: DestinationsRegisterComponent },
+  { path: 'regions', component: RegionsComponent},
+  {path: 'allDestinations', component: AllDestinationsComponent},
   { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
   { path: 'gallery', component: GalleryComponent},
   { path: 'regions', component: RegionsComponent}
@@ -55,7 +59,8 @@ const routesAPP: Routes = [
     HomeComponent,
     GalleryComponent,
     DestinationsComponent,
-    RegionsComponent
+    RegionsComponent,
+    AllDestinationsComponent
   ],
   imports: [
     BrowserModule,
