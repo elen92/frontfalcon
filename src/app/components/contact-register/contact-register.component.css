@@ -1,0 +1,41 @@
+body {
+    background: url(bg../../../../../assets/pics/paris.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.box {
+    width: 800px;
+    padding: 40px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25 px rgba(0,0,0,.5);
+    border-radius: 10px;
+    margin-top: 130px;
+    margin-bottom: 180px;
+    margin-left: 170px;
+    color: #fff;
+}
+.box h2 {
+    margin: 0 0 30px;
+    /* padding: 0; */
+    text-align: center;
+}
+.box input {
+    width: 100%;
+}
+.box .label {
+    text-align: center;
+}
+img {
+    width: 200px;
+    height: 150px;
+    align-items: center;
+    margin-left: 60px;
+}
+.btn {
+    margin-left: 30px;
+    
+}

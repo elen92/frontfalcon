@@ -20,15 +20,25 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { HomeComponent } from './components/home/home.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { RegionsComponent } from './components/regions/regions.component';
+import { AllDestinationsComponent } from './components/all-destinations/all-destinations.component';
 
 
 const routesAPP: Routes = [
-  { path: '', component: BannerPrincipalComponent },
+  { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
+  { path: 'destination', component: DestinationsRegisterComponent },
+  { path: 'regions', component: RegionsComponent},
+  {path: 'allDestinations', component: AllDestinationsComponent},
   { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
+  { path: 'gallery', component: GalleryComponent},
+  { path: 'regions', component: RegionsComponent}
 ];
 
 
@@ -45,7 +55,12 @@ const routesAPP: Routes = [
     ExperiencesComponent,
     FooterComponent,
     BannerPrincipalComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    HomeComponent,
+    GalleryComponent,
+    DestinationsComponent,
+    RegionsComponent,
+    AllDestinationsComponent
   ],
   imports: [
     BrowserModule,

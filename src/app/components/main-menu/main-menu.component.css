@@ -25,13 +25,14 @@
     color: #ff0000;
 }
 .logo img{
-    max-width: 80px;
+    max-width: 180px;
 }
-.contactos button{
+.contactos a{
     background-color: transparent;
     border: none;
+    margin-right: 20px;
 }
-.contactos button:hover{
+.contactos a:hover{
     background-color: transparent;
     border: none;
     color: violet;

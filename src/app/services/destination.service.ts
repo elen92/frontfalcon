@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
 import { Destination } from '../models/Destinations';
+
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +35,9 @@ export class DestinationService {
     .catch(err => {
       console.log(err);
     });
+  }
+  
+  conectionApi(){
+    return this.http.get<Destination>(`${this.url}/destinations/getAll`)
   }
 }
