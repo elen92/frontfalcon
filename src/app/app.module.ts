@@ -23,6 +23,7 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { DestinationsComponent } from './components/destinations/destinations.component';
 import { RegionsComponent } from './components/regions/regions.component';
+import { AllDestinationsComponent } from './components/all-destinations/all-destinations.component';
 
 
 const routesAPP: Routes = [
@@ -31,8 +32,9 @@ const routesAPP: Routes = [
   { path: 'registerUser', component: UserRegisterComponent },
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
-  { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
-  { path: 'regions', component: RegionsComponent}
+  { path: 'destination', component: DestinationsRegisterComponent },
+  { path: 'regions', component: RegionsComponent},
+  {path: 'allDestinations', component: AllDestinationsComponent}
 ];
 
 
@@ -52,7 +54,8 @@ const routesAPP: Routes = [
     MainMenuComponent,
     HomeComponent,
     DestinationsComponent,
-    RegionsComponent
+    RegionsComponent,
+    AllDestinationsComponent
   ],
   imports: [
     BrowserModule,

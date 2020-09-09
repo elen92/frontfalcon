@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Actualización de Destinos</h1>
+  <form [formGroup]="destinationsUpdate" (ngSubmit)="actualizaDestino()" enctype="multipart/form-data">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="country">País</label>
+        <input type="text" class="form-control" id="country" name="country" formControlName="country">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="destinationName">Destino</label>
+      <input type="text" class="form-control" id="destinationName" name="destinationName" formControlName="destinationName">
+    </div>
+    <div class="form-group">
+      <label for="price">Precio</label>
+      <input type="number" class="form-control" id="price" name="price" formControlName="price">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="description">Descripción</label>
+        <input type="text" class="form-control" id="description" name="description" formControlName="description">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="stay">Estadía</label>
+        <input type="number" class="form-control" id="stay" name="stay" formControlName="stay">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="imageLinks">Imagen</label>
+        <input type="text" class="form-control" id="imageLinks" name="imageLinks" formControlName="imageLinks">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Modificar</button>
+  </form>
+</div>
