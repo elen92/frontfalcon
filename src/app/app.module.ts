@@ -22,6 +22,8 @@ import { BannerPrincipalComponent } from './components/banner-principal/banner-p
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { DestinationsComponent } from './components/destinations/destinations.component';
+import { RegionsComponent } from './components/regions/regions.component';
 
 
 const routesAPP: Routes = [
@@ -31,7 +33,8 @@ const routesAPP: Routes = [
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
   { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
-  { path: 'gallery', component: GalleryComponent}
+  { path: 'gallery', component: GalleryComponent},
+  { path: 'regions', component: RegionsComponent}
 ];
 
 
@@ -50,7 +53,9 @@ const routesAPP: Routes = [
     BannerPrincipalComponent,
     MainMenuComponent,
     HomeComponent,
-    GalleryComponent
+    GalleryComponent,
+    DestinationsComponent,
+    RegionsComponent
   ],
   imports: [
     BrowserModule,
