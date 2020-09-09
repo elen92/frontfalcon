@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BannerPrincipalComponent } from './components/banner-principal/banner-principal.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 
 const routesAPP: Routes = [
@@ -30,6 +31,7 @@ const routesAPP: Routes = [
   { path: 'updateUser', canActivate: [AuthGuard], component: UsersUpdateComponent },
   { path: 'contactUs', component: ContactRegisterComponent },
   { path: 'destination', canActivate: [AuthGuard], component: DestinationsRegisterComponent },
+  { path: 'gallery', component: GalleryComponent}
 ];
 
 
@@ -47,7 +49,8 @@ const routesAPP: Routes = [
     FooterComponent,
     BannerPrincipalComponent,
     MainMenuComponent,
-    HomeComponent
+    HomeComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
