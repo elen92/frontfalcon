@@ -3,6 +3,7 @@
     position: relative;
     object-fit: fill;
     border-radius: 0px !important;
+    opacity: 0.9;
 }
 .card {
     border-radius: 0px !important;
@@ -19,10 +20,35 @@
     background-color: rgba(255, 255, 255, 0.3) !important;
     border-radius: 50px;
     border: 0px !important;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 30px;
 }
 .form-group  {
     color: black;
 }
 .form-group  input {
     border: 0px !important;
+}
+.label-finder{
+    color: black;
+}
+.opt-finder{
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    padding: 0 10px;
+    outline: 0px;
+    box-shadow: 0px 4px 17px -7px rgba(0,0,0,0.2);
+}
+.opt-finder:active{
+    outline: 0px;
+}
+.opt-finder:hover{
+    outline: 0px;
+
+}
+.banner-image{
+    opacity: 0.8;
 }
