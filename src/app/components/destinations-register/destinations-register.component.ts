@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DestinationService } from '../../services/destination.service';
+import { CityService } from '../../services/city.service';
 
 @Component({
   selector: 'app-destinations-register',
@@ -12,22 +13,26 @@ import { DestinationService } from '../../services/destination.service';
 })
 export class DestinationsRegisterComponent implements OnInit {
 
+  loaded = false;
   destinationRegisterForm: FormGroup;
+  cities = [];
 
   constructor(
     private formBuilder: FormBuilder,
-    private destinationService: DestinationService
+    private destinationService: DestinationService,
+    private cityService: CityService
   ) {
     this.validator();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): any {
+    this.getCitiesFromApi();
   }
 
   validator(): void{
     this.destinationRegisterForm = this.formBuilder.group({
       destinationName: ['', Validators.required],
-      city: ['', Validators.required],
+      cityId: ['', Validators.required],
       country: ['', Validators.required],
       price: ['', Validators.required],
       description: ['', Validators.required],
@@ -36,10 +41,21 @@ export class DestinationsRegisterComponent implements OnInit {
     });
   }
 
+  async getCitiesFromApi(): Promise<any>{
+    try{
+      this.cities = await this.cityService.getByCoincidence();
+      this.loaded = true;
+    }catch (err){
+      console.log(err);
+    }
+  }
+
   async enviarDestino(): Promise<any>{
     try{
       const destination = await this.destinationService.saveDestinations(this.destinationRegisterForm.value);
-      console.log(destination);
+      if (destination){
+        this.destinationRegisterForm.reset();
+      }
     }catch (err){
       console.log(err);
     }
