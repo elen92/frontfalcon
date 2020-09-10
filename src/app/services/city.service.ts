@@ -14,7 +14,7 @@ export class CityService {
 
   getByCoincidence(): Promise<any> {
 
-    return this.http.get(`http://localhost:3000/api/cities/getAll`)
+    return this.http.get(`${this.apiURL}/cities/getAll`)
     .toPromise()
     .then(cities => cities)
     .catch(error => error);

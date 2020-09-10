@@ -26,7 +26,7 @@ export class DestinationService {
   }
 
   findDestinations(travel): Promise<any> {
-    const url =`http://localhost:3000/api/destinations/getByParams/${travel.origin}/${travel.destination}/${travel.startDate}/${travel.endDate}`;
+    const url =`${this.url}/destinations/getByParams/${travel.origin}/${travel.destination}/${travel.startDate}/${travel.endDate}`;
     return this.http.get(url)
     .toPromise()
     .then(result => {
@@ -36,7 +36,7 @@ export class DestinationService {
       console.log(err);
     });
   }
-  
+
   conectionApi(){
     return this.http.get<Destination>(`${this.url}/destinations/getAll`)
   }
