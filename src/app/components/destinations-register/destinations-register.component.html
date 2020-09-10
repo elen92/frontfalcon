@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5" *ngIf="loaded">
     <h1 class="text-center mb-5">Crea un nuevo destino</h1>
     <form [formGroup]="destinationRegisterForm" (ngSubmit)="enviarDestino()" enctype="multipart/form-data">
         <div class="form-row">
@@ -7,8 +7,10 @@
                 <input type="text" class="form-control" id="destinationName" name="destinationName" formControlName="destinationName" />
             </div>
             <div class="form-group col-md-6">
-                <label for="city">Ciudad</label>
-                <input type="text" class="form-control" id="city" name="city" formControlName="city" />
+                <label for="cityId">Ciudad</label>
+                <select class="opt-finder" name="miselect" formControlName="cityId"  id="cityId" name="cityId">
+                    <option *ngFor="let item of cities" [value]="item._id">{{ item.name }}</option>
+                </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="country">País</label>

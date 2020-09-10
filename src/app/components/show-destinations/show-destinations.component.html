@@ -1,0 +1,18 @@
+<div class="show-destinations-box" *ngIf="loaded">
+    <div class="row">
+        <div class="container">
+            <div class="card-container">
+                <div class="destinationCard" *ngFor="let destination of destinations">
+                    <div>
+                        <h2>{{ destination.destinationName }}</h2>
+                        <div class="destinationCountry">{{ destination.country }}</div>
+                        <div class="destinationCity">{{destination.cityId}}</div>
+                        <div class="destinationDes">{{destination.description}}</div>
+                        <hr>
+                        <div class="destinationPrice">{{destination.price}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

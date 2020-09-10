@@ -26,6 +26,7 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { RegionsComponent } from './components/regions/regions.component';
 import { AllDestinationsComponent } from './components/all-destinations/all-destinations.component';
 import { DataDestinationsComponent } from './components/data-destinations/data-destinations.component';
+import { ShowDestinationsComponent } from './components/show-destinations/show-destinations.component';
 
 
 const routesAPP: Routes = [
@@ -41,6 +42,7 @@ const routesAPP: Routes = [
   { path: 'gallery', component: GalleryComponent},
   { path: 'regions', component: RegionsComponent},
   {path: 'destinationOne/:id', component: DataDestinationsComponent},
+  { path: 'show-destinations/:destinations', component: ShowDestinationsComponent }
 ];
 
 
@@ -63,7 +65,8 @@ const routesAPP: Routes = [
     DestinationsComponent,
     RegionsComponent,
     AllDestinationsComponent,
-    DataDestinationsComponent
+    DataDestinationsComponent,
+    ShowDestinationsComponent
   ],
   imports: [
     BrowserModule,
