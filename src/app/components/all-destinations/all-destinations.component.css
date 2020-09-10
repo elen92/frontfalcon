@@ -1,12 +1,27 @@
-.card{
+body {
+    background: url(/assets/pics/Colombia.jpg);
+    /* background-color: dimgrey; */
+    position: relative;
+    background-size: cover;
+}
+.card {
     margin-top: 20px;
+    background: #627c83;
+    bottom: 40px;
+    margin-left: 7% !important;
+    color: #ffff;
+}
+.card img {
+    height: 210px;
+    
 }
 .container .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
-
 .titulo h1{
     display: flex;
     justify-content: center;
+    color: #ffff;
+    font-size: 6em;
 }
