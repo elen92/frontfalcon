@@ -6,7 +6,7 @@ import {City} from '../models/city';
   providedIn: 'root'
 })
 export class CityService {
-  apiURL = 'https://falcon-travel-api.herokuapp.com/';
+  apiURL = 'https://falcon-travel-api.herokuapp.com/api/';
 
   constructor(
     private http: HttpClient
