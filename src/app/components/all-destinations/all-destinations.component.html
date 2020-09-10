@@ -1,1 +1,23 @@
-<p>all-destinations works!</p>
+<div class="titulo">
+    <h1>
+        Destinos
+    </h1>
+</div>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let destination of allDestinations">
+            <div class="card" style="width: 18rem;">
+                <img src="{{destination.imageLinks}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{destination.destinationName}}</h5>
+                  <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; height: 100px;">{{destination.description}}</p>
+                  <p class="card-text">Precio: {{destination.price}}$</p>
+                  <p class="card-text">Días: {{destination.stay}}</p>
+                  <a href="#" class="btn btn-primary">Ver</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

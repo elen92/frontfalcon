@@ -38,6 +38,8 @@ export class DestinationService {
   }
   
   conectionApi(){
+    console.log(`${this.url}/destinations/getAll`)
     return this.http.get<Destination>(`${this.url}/destinations/getAll`)
+    
   }
 }
