@@ -1,3 +1,7 @@
 .bg-black {
     background-color:#42565b !important;
 }
+.text-muted:hover{
+    color: #ef2e5c !important;
+    text-decoration: none !important;
+}
