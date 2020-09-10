@@ -1,23 +1,26 @@
-<div class="titulo">
-    <h1>
-        Destinos
-    </h1>
-</div>
-<hr>
-
-<div class="container">
-    <div class="row">
-        <div class="col" *ngFor="let destination of allDestinations">
-            <div class="card" style="width: 18rem;">
-                <img src="{{destination.imageLinks}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{destination.destinationName}}</h5>
-                  <p class="card-text" style="overflow: hidden; text-overflow: ellipsis; height: 100px;">{{destination.description}}</p>
-                  <p class="card-text">Precio: {{destination.price}}$</p>
-                  <p class="card-text">Días: {{destination.stay}}</p>
-                  <a routerLink="/destinationOne/{{destination._id}}" class="btn btn-primary">Ver</a>
-                </div>
-              </div>
+<body>
+    <div class="titulo font-weight-bold">
+        <h1>
+            Destinos
+        </h1>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col" *ngFor="let destination of allDestinations">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{destination.imageLinks}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title font-weight-bold">{{destination.destinationName}}</h5>
+                      <p class="card-text font-weight-bold"  style="overflow: hidden; text-overflow: ellipsis; height: 100px;">{{destination.description}}</p>
+                      <p class="card-text">Precio: {{destination.price}}$</p>
+                      <p class="card-text">Días: {{destination.stay}}</p>
+                      <a href="#" class="btn btn-danger font-weight-bold">Ver</a>
+                    </div>
+                  </div>
+            </div>
         </div>
     </div>
-</div>
+    
+</body>
