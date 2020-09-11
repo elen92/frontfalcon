@@ -1,17 +1,29 @@
-.card-title{
-    text-align: center;
-    /* color: white; */
-    font-size: x-large;    
+.card-title {
+  text-align: center;
+  /* color: white; */
+  font-size: x-large;
 }
-.card-body{
-    background-color: #ef2e5c;
-    height: 10px;
-    
+
+.card-body {
+  height: auto;
+  border-radius: 1px 1px 15px 15px;
+  margin-top: -39px;
+  background: rgba(61, 61, 61, 0.8);
+  color: #ffffff;
 }
-.card{
-    padding: 6px;
-    border: 0px;
+
+
+.card {
+  border: 0px;
+  border-radius: 15px !important;
+
 }
-h2{
-    margin-top: 20px;
+
+h2 {
+  margin-top: 20px;
+}
+
+.card-img-top {
+  border-radius: 15px !important;
+
 }
