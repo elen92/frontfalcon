@@ -1,5 +1,5 @@
 .card-img {
-    height: 500px;
+    height: 600px;
     position: relative;
     object-fit: fill;
     border-radius: 0px !important;
@@ -10,11 +10,12 @@
     
 }
 .card .card-title {
-    font-size: 60px;
+    margin-top: 2%;
+    font-size: 80px;
     color: #dd7033;
 }
 .card .card-text {
-    font-size: 30px;
+    font-size: 40px;
 }
 .form-inline {
     background-color: rgba(255, 255, 255, 0.3) !important;
