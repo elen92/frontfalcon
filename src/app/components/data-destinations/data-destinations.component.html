@@ -1,1 +1,20 @@
-<p>data-destinations works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="card mb-3" style="">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img src="{{oneDestination.imageLinks}}" class="card-img imgDestination" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{oneDestination.destinationName}}</h5>
+                  <p class="card-text">{{oneDestination.description}}</p>
+                  <p class="card-text"><small class="text-muted">Precio: ${{oneDestination.price}}</small></p>
+                  <p class="card-text"><small class="text-muted">Duración: {{oneDestination.stay}} días</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
