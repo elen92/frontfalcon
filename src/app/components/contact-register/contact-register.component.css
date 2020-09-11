@@ -1,5 +1,5 @@
 body {
-    background: url(bg../../../../../assets/pics/paris.webp);
+    background: url(/assets/pics/paris.webp);
     background-size: cover;
     display: flex;
     justify-content: center;
