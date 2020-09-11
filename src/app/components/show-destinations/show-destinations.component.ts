@@ -12,6 +12,7 @@ export class ShowDestinationsComponent implements OnInit {
   destinations = [];
   cities: any;
   loaded = false;
+  noDestinations = false;
 
   constructor(
     private router: Router,
@@ -22,6 +23,9 @@ export class ShowDestinationsComponent implements OnInit {
   async ngOnInit() {
       await this.getCities();
       const destinations = JSON.parse(this.activatedRoute.snapshot.paramMap.get('destinations'));
+      if (destinations.length === 0){
+        this.noDestinations = true;
+      }
       await this.changeCityName(destinations);
   }
 
@@ -43,6 +47,10 @@ export class ShowDestinationsComponent implements OnInit {
     });
     this.destinations = destinations;
     this.loaded = true;
+  }
+
+  goToDestination(destination){
+    this.router.navigate(['/destinationOne/' + destination._id]);
   }
 
 }

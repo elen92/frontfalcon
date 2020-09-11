@@ -1,18 +1,40 @@
 <div class="show-destinations-box" *ngIf="loaded">
-    <div class="row">
+    <!-- <div class="row"> -->
         <div class="container">
-            <div class="card-container">
+            <div class="text-center" style="margin: 50px 0px 30px;" *ngIf="!noDestinations">
+                <h1>Tenemos los siguientes destinos para ti</h1>
+            </div>
+            <div class="card-container" *ngIf="!noDestinations">
                 <div class="destinationCard" *ngFor="let destination of destinations">
-                    <div>
-                        <h2>{{ destination.destinationName }}</h2>
-                        <div class="destinationCountry">{{ destination.country }}</div>
-                        <div class="destinationCity">{{destination.cityId}}</div>
-                        <div class="destinationDes">{{destination.description}}</div>
+                    <div (click)="goToDestination(destination)">
+                        <div class="img-dest">
+                            <img src="{{destination.imageLinks}}" alt="">
+                            <div class="img-dest-title">
+                                Ver destino
+                            </div>
+                        </div>
+                        <div class="card-text">
+                            <h2 style="font-weight: bold;">{{ destination.destinationName }}</h2>
+                            <div class="destinationCountry">{{ destination.country }}</div>
+                            <div class="destinationCity"><h4>{{destination.cityId}}</h4></div>
+                            <div class="destinationDes">{{destination.description}}</div>
+                        </div>
                         <hr>
                         <div class="destinationPrice">{{destination.price}}</div>
                     </div>
                 </div>
             </div>
+            <div class="btn-return text-center" *ngIf="!noDestinations">
+                <a routerLink="/">
+                    Regresar a buscar nuevos destinos
+                </a>
+            </div>
+            <div class="noDestionations" *ngIf="noDestinations">
+                <h2>No hay destinos asociados a esta ciudad para ninguna de nuestras fechas</h2>
+                <div class="cont-return">
+                    <a routerLink="/">Ir a buscar destinos</a>
+                </div>
+            </div>
         </div>
-    </div>
+    <!-- </div> -->
 </div>
