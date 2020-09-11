@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DestinationService } from '../../services/destination.service';
 import { CityService } from '../../services/city.service';
 
@@ -20,7 +21,8 @@ export class DestinationsRegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private destinationService: DestinationService,
-    private cityService: CityService
+    private cityService: CityService,
+    private route: Router
   ) {
     this.validator();
   }
@@ -55,6 +57,7 @@ export class DestinationsRegisterComponent implements OnInit {
       const destination = await this.destinationService.saveDestinations(this.destinationRegisterForm.value);
       if (destination){
         this.destinationRegisterForm.reset();
+        this.route.navigate(['/allDestinations'])
       }
     }catch (err){
       console.log(err);

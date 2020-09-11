@@ -1,38 +1,48 @@
-.main-menu-box
-{
+.main-menu-box {
     display: flex;
     justify-content: space-around;
     align-content: center;
 }
-.iconos,.contactos,.logo{
+
+.iconos,
+.contactos,
+.logo {
     display: flex;
     align-items: center;
 }
-.iconos i{
+
+.iconos i {
     font-size: 35px;
     margin: 0 5px;
-}   
-.icon-insta{
+}
+
+.icon-insta {
     color: violet;
 }
-.icon-face{
+
+.icon-face {
     color: #3b5998;
 }
-.icon-twit{
+
+.icon-twit {
     color: #00acee;
 }
-.icon-you{
+
+.icon-you {
     color: #ff0000;
 }
-.logo img{
+
+.logo img {
     max-width: 180px;
 }
-.contactos a{
+
+.contactos a {
     background-color: transparent;
     border: none;
     margin-right: 20px;
 }
-.contactos a:hover{
+
+.contactos a:hover {
     background-color: transparent;
     border: none;
     color: violet;
