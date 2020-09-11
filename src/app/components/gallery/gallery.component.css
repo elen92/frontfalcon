@@ -172,6 +172,9 @@ body{
     color: black;
 }
 .graficos {
-    margin-left: 5%;
-    z-index: 5px;
+    margin-left: 6%;
+   /*  z-index: 5px; */
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
 }
