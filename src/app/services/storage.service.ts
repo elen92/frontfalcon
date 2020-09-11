@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs' //Permite crerar una variable reactiva, esto quire decir que va estar escuchando los cambios de la variable
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService {
 
-  constructor() { }
+  private auth = new BehaviorSubject<{}>(null)
+
+  auth$ = this.auth.asObservable();//Inidica que nos podemos suscribir, ósea escuchar los cambios de  la variable
+
+
+  constructor() {
+    this.auth.next(this.dataUser())
+  }
 
   saveToken(token){
-    console.log('token --> ', token)
     localStorage.setItem('token', token);
+    this.auth.next(this.dataUser())
   }
 
   getToken(){
@@ -35,6 +43,11 @@ export class StorageService {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
       }
     ).join(''))
+  }
+
+  destruirSesion(){
+    localStorage.removeItem('token')
+    this.auth.next(null)
   }
 
   /*isAuthenticate(){

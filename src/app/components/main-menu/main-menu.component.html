@@ -1,27 +1,66 @@
 <div class="main-menu-box">
-     <div class="iconos">
-          <a class="icon-insta" href="http://" target="_blank" >
-               <i class="fab fa-instagram-square"></i>
-          </a>
-          <a class="icon-face" href="http://" target="_blank" >
-               <i class="fab fa-facebook-square"></i>
-          </a>
-          <a class="icon-you" href="http://" target="_blank" >
-               <i class="fab fa-youtube-square"></i>
-          </a>
-          <a class="icon-twit" href="http://" target="_blank" >
-               <i class="fab fa-twitter-square"></i>
-          </a>
-     </div>
-     <div class="logo">
-          <a href="#">
-               <img src="assets/logoMenu.png" alt="">
-          </a>
-     </div>
-     <div class="contactos">
-          <a routerLink="/contactUs">Contactenos</a> 
-          <a routerLink="/login">Iniciar Sesión</a>
-          <img src="" alt="">
-     </div>
-</div>
+    <div class="iconos">
+        <a class="icon-insta" href="http://" target="_blank">
+            <i class="fab fa-instagram-square"></i>
+        </a>
+        <a class="icon-face" href="http://" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a class="icon-you" href="http://" target="_blank">
+            <i class="fab fa-youtube-square"></i>
+        </a>
+        <a class="icon-twit" href="http://" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+        </a>
+    </div>
+    <div class="logo">
+        <a href="#">
+            <img src="assets/logoMenu.png" alt="">
+        </a>
+    </div>
+    <div class="contactos">
+        <div *ngIf="user; else menuLogin">
 
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div>Hola
+                            <span *ngIf="user.email == 'roma900ac@gmail.com'">Administrador</span> {{user.firstName}} <i class="fas fa-compress-arrows-alt"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/destination" *ngIf="user.email == 'roma900ac@gmail.com'">Crear destinos</a>
+                        <a class="dropdown-item" (click)="cerrarSesion()">Cerrar sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" *ngIf="!user">
+                        <a class="nav-link" routerLink="/registerUser">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <ng-template #menuLogin>
+                            <a routerLink="/login">Iniciar Sesión</a>
+                        </ng-template>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contactUs">Contactenos</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+
+
+        <!-- El # de menuLogin es porque es un id de angular  -->
+
+
+
+    </div>
+</div>
